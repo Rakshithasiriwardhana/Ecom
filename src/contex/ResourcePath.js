@@ -15,13 +15,14 @@ export const ResourcePath =  {
     ADMIN_DASHBOARD: `${PROJECT}/admin/dashboard`,
 
     // API
-    API: 'http://localhost:3001/api/v1',
+    API: 'http://localhost:3002/api/v1',
     
     // User
     USER: '/user',
     USER_PROFILE: '/user/profile',
     USER_ORDERS: '/user/orders',
    
+    AUTH: '/auth'
 
    
 }

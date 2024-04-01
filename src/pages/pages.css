@@ -35,18 +35,18 @@
 }
 .project-form input {
     width: 100%;
-    color: #fffee0ec;
+    color: #0f0f0eec;
 }
 
 .project-form button {
-    color: #9e9e9e;
+    color: #000000;
     border-color: #F5F5F5;
 }
 .project-form .submit{
     width: 100%;
 }
 .project-form .submit:hover {
-    color: #ffffff;
+    color: #141414;
     background-color: #F5F5F5;
 }
 

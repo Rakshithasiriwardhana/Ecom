@@ -3,6 +3,7 @@ import { AiOutlineShoppingCart, AiOutlineUserAdd } from "react-icons/ai";
 import "./Nav.css";
 import React, { useContext, useEffect, useState } from "react";
 import { UserContext } from "../contex/UserContext";
+import UserAction from "../components/UserAction";
 
 const Nav = ({ handleInputChange, query }) => {
   const { user, logout } = useContext(UserContext);
@@ -17,7 +18,7 @@ const Nav = ({ handleInputChange, query }) => {
       logout();
       setIsUserLoggedIn(false);
     } else {
-      window.location.href = "/login";
+      window.location.href = "/cart/login";
     }
   };
 
@@ -40,7 +41,7 @@ const Nav = ({ handleInputChange, query }) => {
           <AiOutlineShoppingCart className="nav-icons" />
         </button>
         <button onClick={handleLogout}>
-          <AiOutlineUserAdd className="nav-icons" />
+          <UserAction className="nav-icons" />
         </button>
       </div>
     </nav>
