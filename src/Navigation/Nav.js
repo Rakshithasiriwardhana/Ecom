@@ -5,13 +5,14 @@ import React, { useContext, useEffect, useState } from "react";
 import { UserContext } from "../contex/UserContext";
 // import UserAction from "../components/Login/UserAction";
 import LogoutIcon from "@mui/icons-material/Logout";
+// import Cart from "../pages/Cart/Cart";
 
 const Nav = ({ handleInputChange, query, isShow }) => {
   const { user, logout } = useContext(UserContext);
   const [isUserLoggedIn, setIsUserLoggedIn] = useState(user.id !== 1);
 
-  const {navigate } = useContext(UserContext);
-  const [isUserNavigate, setIsNavigate] = useState(user.id !== 1);
+  // const {navigate } = useContext(UserContext);
+  // const [isUserNavigate, setIsNavigate] = useState(user.id !== 1);
 
   useEffect(() => {
     setIsUserLoggedIn(user.id !== 0);
@@ -25,14 +26,14 @@ const Nav = ({ handleInputChange, query, isShow }) => {
       window.location.href = "/cart/login";
     }
   };
-  const handleNavigate = () => {
-    if (isUserNavigate) {
-      navigate();
-      setIsNavigate(false);
-    } else {
-      window.location.href = "/cart/cart";
-    }
-  };
+  // const handleNavigate = () => {
+  //   if (isUserNavigate) {
+  //     navigate();
+  //     setIsNavigate(false);
+  //   } else {
+  //     window.location.href = "/cart/cart";
+  //   }
+  // };
 
   return (
     <nav>
@@ -42,15 +43,16 @@ const Nav = ({ handleInputChange, query, isShow }) => {
           type="text"
           onChange={handleInputChange || null}
           value={query || undefined}
-          placeholder="Enter your search shoes."
+          placeholder="Enter your search shoes"
         />
       </div>
       <div className="profile-container">
-        <button>
+        <button hidden={isShow} onClick={() => window.location.href = "/cart/favorites"}>
           <FiHeart className="nav-icons" />
         </button>
-        <button onClick={handleNavigate}>
-          <AiOutlineShoppingCart className="nav-icons" />
+        <button  onClick={() => window.location.href = "/cart/orders"} >
+          <AiOutlineShoppingCart className="nav-icons"/>
+         
         </button>
       
         <button hidden={isShow} >

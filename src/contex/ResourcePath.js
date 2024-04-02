@@ -3,10 +3,13 @@ export const PROJECT ='/cart'
 export const ResourcePath =  {
 
     // routes
-    HOME: `${PROJECT}/home/cart`,
+    HOME: `${PROJECT}/home`,
     LOGIN: `${PROJECT}/login`,
     REGISTER: `${PROJECT}/register`,
     CART: `${PROJECT}/cart`,
+    ORDERS: `${PROJECT}/orders`,
+    FAVORITES: `${PROJECT}/favorites`,
+
     // Error
     ERROR: `${PROJECT}/404`,
 

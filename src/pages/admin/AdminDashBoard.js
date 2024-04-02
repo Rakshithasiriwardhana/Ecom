@@ -1,10 +1,10 @@
 import React from "react";
 import Navigation from "../../Navigation/Nav";
 
-const AdminDashBoard = () => {
+const AdminDashBoard = (handleInputChange, query, isShow) => {
     return (
         <div>
-           <Navigation isShow={true}/>
+          <Navigation isShow={true}/>
             <h1>Admin Dashboard</h1>
         </div>
     );
