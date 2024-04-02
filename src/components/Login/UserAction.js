@@ -16,9 +16,8 @@ export default function UserAction() {
   
 
   return (
-    <Box sx={{ minWidth: 100 }}>
-      <FormControl fullWidth>
-        <AiOutlineUserAdd id="demo-simple-select-label">Profile</AiOutlineUserAdd>
+    <Box sx={{ minWidth: 80 }}>
+      <FormControl fullWidth className='user-action'>
         <Select
           labelId="demo-simple-select-label"
           id="demo-simple-select"
@@ -26,7 +25,6 @@ export default function UserAction() {
           label="User"
           onChange={handleChange}
         >
-          <MenuItem value={10}>My Profile</MenuItem>
           <MenuItem value={20}>Logout</MenuItem>
           <MenuItem value={30}>My Orders</MenuItem>
         </Select>

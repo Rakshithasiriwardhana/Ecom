@@ -6,9 +6,9 @@ import {
   OutlinedInput,
 } from "@mui/material";
 import axios from "axios";
-import { ResourcePath } from "../contex/ResourcePath";
+import { ResourcePath } from "../../contex/ResourcePath";
 import { jwtDecode } from "jwt-decode";
-import { UserContext } from "../contex/UserContext";
+import { UserContext } from "../../contex/UserContext";
 import RemoveRedEyeOutlinedIcon from "@mui/icons-material/RemoveRedEyeOutlined";
 import VisibilityOffOutlinedIcon from "@mui/icons-material/VisibilityOffOutlined";
 
@@ -99,7 +99,7 @@ const LoginComponent = () => {
       </div>
       <div className="form-group">
         <Button variant="contained" type="submit" className="submit">
-          Login
+        Sign in
         </Button>
       </div>
     </form>

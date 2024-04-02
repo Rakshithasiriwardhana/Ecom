@@ -3,11 +3,15 @@ import { AiOutlineShoppingCart, AiOutlineUserAdd } from "react-icons/ai";
 import "./Nav.css";
 import React, { useContext, useEffect, useState } from "react";
 import { UserContext } from "../contex/UserContext";
-import UserAction from "../components/UserAction";
+// import UserAction from "../components/Login/UserAction";
+import LogoutIcon from "@mui/icons-material/Logout";
 
-const Nav = ({ handleInputChange, query }) => {
+const Nav = ({ handleInputChange, query, isShow }) => {
   const { user, logout } = useContext(UserContext);
   const [isUserLoggedIn, setIsUserLoggedIn] = useState(user.id !== 1);
+
+  const {navigate } = useContext(UserContext);
+  const [isUserNavigate, setIsNavigate] = useState(user.id !== 1);
 
   useEffect(() => {
     setIsUserLoggedIn(user.id !== 0);
@@ -21,15 +25,23 @@ const Nav = ({ handleInputChange, query }) => {
       window.location.href = "/cart/login";
     }
   };
+  const handleNavigate = () => {
+    if (isUserNavigate) {
+      navigate();
+      setIsNavigate(false);
+    } else {
+      window.location.href = "/cart/cart";
+    }
+  };
 
   return (
     <nav>
-      <div className="nav-container">
+      <div className="nav-container"  hidden={isShow}>
         <input
           className="search-input"
           type="text"
-          onChange={handleInputChange}
-          value={query}
+          onChange={handleInputChange || null}
+          value={query || undefined}
           placeholder="Enter your search shoes."
         />
       </div>
@@ -37,12 +49,20 @@ const Nav = ({ handleInputChange, query }) => {
         <button>
           <FiHeart className="nav-icons" />
         </button>
-        <button>
+        <button onClick={handleNavigate}>
           <AiOutlineShoppingCart className="nav-icons" />
         </button>
-        <button onClick={handleLogout}>
-          <UserAction className="nav-icons" />
+      
+        <button hidden={isShow} >
+          <AiOutlineUserAdd className="nav-icons" />
         </button>
+        <button onClick={handleLogout}>
+          <LogoutIcon className="nav-icons" />
+        </button>
+
+        {/* <button onClick={handleLogout}>
+          <UserAction className="nav-icons" />
+        </button> */}
       </div>
     </nav>
   );

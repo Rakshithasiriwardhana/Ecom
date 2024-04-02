@@ -3,7 +3,7 @@ import {Button, InputAdornment, IconButton, OutlinedInput} from "@mui/material";
 import axios from "axios";
 import RemoveRedEyeOutlinedIcon from '@mui/icons-material/RemoveRedEyeOutlined';
 import VisibilityOffOutlinedIcon from '@mui/icons-material/VisibilityOffOutlined';
-import { ResourcePath } from "../contex/ResourcePath";
+import { ResourcePath } from "../../contex/ResourcePath";
 
 const RegisterComponent = () => {
 
@@ -81,7 +81,7 @@ const RegisterComponent = () => {
                 />
             </div>
             <div className="form-group">
-                <Button variant="contained" type="submit" className="submit">Register</Button>
+                <Button variant="contained" type="submit" className="submit">Sign Up</Button>
             </div>
         </form>
     );

@@ -3,7 +3,7 @@ export const PROJECT ='/cart'
 export const ResourcePath =  {
 
     // routes
-    HOME: `${PROJECT}/home`,
+    HOME: `${PROJECT}/home/cart`,
     LOGIN: `${PROJECT}/login`,
     REGISTER: `${PROJECT}/register`,
     CART: `${PROJECT}/cart`,

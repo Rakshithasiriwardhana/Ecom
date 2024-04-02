@@ -1,8 +1,8 @@
 import React, {useContext} from "react";
 import "./pages.css";
 import { UserContext } from "../contex/UserContext";
-import LoginComponent from "../components/LoginComponent";
-import RegisterComponent from "../components/RegisterComponent";
+import LoginComponent from "../components/Login/LoginComponent";
+import RegisterComponent from "../components/Login/RegisterComponent";
 
 
 const LoginPage = () => {
@@ -17,13 +17,13 @@ const LoginPage = () => {
         <div className="login-page container">
             <div className={`login-container ${isUserLoggedIn() ? "hidden-div" : null} `}>
                 <div className="login-header">
-                    <h1>Login</h1>
+                    <h1>Sign in</h1>
                 </div>
                 <LoginComponent />
             </div>
             <div className="register-container">
                 <div className="login-header">
-                    <h1>Register</h1>
+                    <h1>Sign up</h1>
                 </div>
                 <RegisterComponent />
             </div>

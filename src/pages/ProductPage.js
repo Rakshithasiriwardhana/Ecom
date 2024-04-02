@@ -66,7 +66,7 @@ function ProductPage() {
   return (
     <>
       <Sidebar handleChange={handleChange} />
-      <Navigation query={query} handleInputChange={handleInputChange} />
+      <Navigation query={query} handleInputChange={handleInputChange} isShow={false} />
       <Recommended handleClick={handleClick} />
       <Products result={result} />
     </>
