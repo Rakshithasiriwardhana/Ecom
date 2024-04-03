@@ -8,6 +8,10 @@ import ProductPage from "./pages/ProductPage";
 import LoginPage from "./pages/LoginPage";
 import { CartPage } from "./pages/Cart/CartPage";
 import { FavoritesPage } from "./pages/FavoritesPage";
+import AdminUser from "./pages/admin/AdminUser";
+import AdminProduct from "./pages/admin/AdminProduct";
+import WelcomePage from "./pages/user/WelcomePage";
+import Nav from "./Navigation/Nav";
 function App() {
   const { user } = useContext(UserContext);
 
@@ -24,12 +28,18 @@ function App() {
 
   return (
     <BrowserRouter>
+    <Nav/>
       <Routes>
         <Route path={ResourcePath.HOME} element={getHomeElement()} />
         <Route path={ResourcePath.LOGIN} element={<LoginPage />} />
         <Route path={ResourcePath.CART} element={<ProductPage />} />
         <Route path={ResourcePath.ORDERS} element={<CartPage />} />
-        <Route path={ResourcePath.FAVORITES} element={<FavoritesPage />} />
+        <Route path={ResourcePath.FAVORITES} element={<FavoritesPage />}/>
+        <Route path={ResourcePath.USER} element={<WelcomePage />} />
+
+        <Route path={ResourcePath.USER_PROFILE} element={<AdminUser />} />
+        <Route path={ResourcePath.USER_ORDERS} element={<AdminProduct />} />
+
       </Routes>
     </BrowserRouter>
   );

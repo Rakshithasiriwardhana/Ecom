@@ -1,15 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useState } from "react";
 import Sidebar from "../Sidebar/Sidebar";
-import Navigation from "../Navigation/Nav";
 import Products from "../Products/Products";
 import Card from "../components/Card";
 import data from "../db/data";
 import Recommended from "../Recommended/Recommended/Recommended";
+import { UserContext } from "../contex/UserContext";
 
 
 function ProductPage() {
   const [selectedCategory, setSelectedCategory] = useState(null);
+  const { user } = useContext(UserContext);
+  let isShow = user.role === "admin" ? false : true;
 
 
   const [query, setQuery] = useState("");
@@ -57,6 +59,7 @@ function ProductPage() {
           reviews={reviews}
           prevPrice={prevPrice}
           newPrice={newPrice}
+          isShow={isShow}
         />
       )
     );
@@ -65,9 +68,12 @@ function ProductPage() {
   const result = filteredData(data, selectedCategory, query);
   return (
     <>
+    <div  style={{ display: isShow ? "flex" : "none" }}>
       <Sidebar handleChange={handleChange} />
-      <Navigation query={query} handleInputChange={handleInputChange} isShow={false} />
-      <Recommended handleClick={handleClick} />
+      
+      {/* <Navigation query={query} handleInputChange={handleInputChange} isShow={false} /> */}
+      <Recommended handleClick={handleClick} display={isShow}/>
+      </div>
       <Products result={result} />
     </>
   );

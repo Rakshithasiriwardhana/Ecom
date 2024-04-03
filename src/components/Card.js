@@ -1,6 +1,9 @@
+import { useContext } from "react";
 import { BsFillBagFill } from "react-icons/bs";
+import { UserContext } from "../contex/UserContext";
 
-const Card = ({ img, title, star, reviews, prevPrice, newPrice }) => {
+const Card = ({ img, title, star, reviews, prevPrice, newPrice,isShow }) => {
+ 
   return (
     <>
       <section className="card">
@@ -17,6 +20,10 @@ const Card = ({ img, title, star, reviews, prevPrice, newPrice }) => {
             </div>
             <div className="bag">
               <BsFillBagFill className="bag-icon" />
+            </div>
+            <div>
+              <button className="bag-btn" hidden={isShow}>Edit</button>
+              <button className="bag-btn" hidden={isShow}>Delete</button>
             </div>
           </section>
         </div>
