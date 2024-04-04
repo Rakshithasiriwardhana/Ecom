@@ -10,9 +10,6 @@ const Sidebar = ({ handleChange }) => {
         <div className="logo-container">
           <br></br>
           <br></br>
-
-          <br></br>
-          <br></br>
           {/* <h1>🛒</h1> */}
           <h1>Ecom</h1>
         </div>

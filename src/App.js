@@ -12,6 +12,8 @@ import AdminUser from "./pages/admin/AdminUser";
 import AdminProduct from "./pages/admin/AdminProduct";
 import WelcomePage from "./pages/user/WelcomePage";
 import Nav from "./Navigation/Nav";
+import LandingPage from "./pages/user/LandingPage";
+import UserOders from "./pages/customer/UserOders";
 function App() {
   const { user } = useContext(UserContext);
 
@@ -22,7 +24,7 @@ function App() {
       case "user":
         return <ProductPage />;
       default:
-        return <LoginPage />;
+        return <WelcomePage />;
     }
   };
 
@@ -30,15 +32,18 @@ function App() {
     <BrowserRouter>
     <Nav/>
       <Routes>
+        <Route path="/" element={getHomeElement() } />
         <Route path={ResourcePath.HOME} element={getHomeElement()} />
         <Route path={ResourcePath.LOGIN} element={<LoginPage />} />
         <Route path={ResourcePath.CART} element={<ProductPage />} />
         <Route path={ResourcePath.ORDERS} element={<CartPage />} />
         <Route path={ResourcePath.FAVORITES} element={<FavoritesPage />}/>
-        <Route path={ResourcePath.USER} element={<WelcomePage />} />
+        <Route path={ResourcePath.USER} element={<AdminUser />} />
+        {/* <Route path={ResourcePath.LANDING} element={<LandingPage />} /> */}
 
         <Route path={ResourcePath.USER_PROFILE} element={<AdminUser />} />
-        <Route path={ResourcePath.USER_ORDERS} element={<AdminProduct />} />
+        <Route path={ResourcePath.USER_ORDERS} element={<UserOders />} />
+        <Route path={ResourcePath.ADMIN_DASHBOARD} element={<LandingPage />} />
 
       </Routes>
     </BrowserRouter>
