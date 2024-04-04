@@ -25,6 +25,7 @@ export const ResourcePath =  {
     USER: '/user',
     USER_PROFILE: '/user/profile',
     USER_ORDERS: '/user/orders',
+    USER_DASHBOARD: '/user/home',
 
     GET_ALL_USERS:"https://api.escuelajs.co/api/v1/users",
     // GET_ALL_ORDERS:"https://fakestoreapi.com/carts",

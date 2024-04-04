@@ -1,5 +1,5 @@
 import React from "react";
-// import LandingPage from "./LandingPage";
+import LandingPage from "./LandingPage";
 
 
 const WelcomePage = () => {
@@ -8,7 +8,7 @@ const WelcomePage = () => {
       
       <h1>Welcome </h1>
 
-      {/* <LandingPage/> */}
+      <LandingPage/>
     </div>
   );
 }

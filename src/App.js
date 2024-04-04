@@ -39,11 +39,10 @@ function App() {
         <Route path={ResourcePath.ORDERS} element={<CartPage />} />
         <Route path={ResourcePath.FAVORITES} element={<FavoritesPage />}/>
         <Route path={ResourcePath.USER} element={<AdminUser />} />
-        {/* <Route path={ResourcePath.LANDING} element={<LandingPage />} /> */}
-
+       
         <Route path={ResourcePath.USER_PROFILE} element={<AdminUser />} />
         <Route path={ResourcePath.USER_ORDERS} element={<UserOders />} />
-        <Route path={ResourcePath.ADMIN_DASHBOARD} element={<LandingPage />} />
+        <Route path={ResourcePath.USER_DASHBOARD} element={<LandingPage />} />
 
       </Routes>
     </BrowserRouter>
