@@ -1,11 +1,14 @@
 import React from "react";
+// import LandingPage from "./LandingPage";
 
 
 const WelcomePage = () => {
   return (
     <div>
       
-      <h1>Welcome User</h1>
+      <h1>Welcome </h1>
+
+      {/* <LandingPage/> */}
     </div>
   );
 }

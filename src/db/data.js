@@ -11,6 +11,7 @@ const data = [
     company: "Nike",
     color: "white",
     category: "sneakers",
+    id: 1,
   },
   {
     img: "https://m.media-amazon.com/images/I/519MRhRKGFL._AC_UX575_.jpg",
@@ -22,6 +23,7 @@ const data = [
     company: "Nike",
     color: "red",
     category: "sneakers",
+    id: 2,
   },
 
   {
@@ -34,17 +36,19 @@ const data = [
     company: "Nike",
     color: "green",
     category: "sneakers",
+    id: 3,
   },
   {
     img: "https://m.media-amazon.com/images/I/71oEKkghg-L._AC_UX575_.jpg",
     title: "Nike Running Shoe",
-    // star: <AiFillStar className="rating-star" />,
+    star: <AiFillStar className="rating-star" />,
     reviews: "(123 reviews)",
     prevPrice: "$140,00",
     newPrice: "200",
     company: "Adidas",
     color: "black",
     category: "sneakers",
+    id: 4,
   },
   {
     img: "https://m.media-amazon.com/images/I/41M54ztS6IL._AC_SY625._SX._UX._SY._UY_.jpg",
@@ -56,6 +60,7 @@ const data = [
     company: "Vans",
     color: "green",
     category: "flats",
+    id: 5,
   },
   {
     img: "https://m.media-amazon.com/images/I/71zKuNICJAL._AC_UX625_.jpg",
@@ -67,6 +72,7 @@ const data = [
     company: "Adidas",
     color: "black",
     category: "flats",
+    id: 6,
   },
 
   {
@@ -79,6 +85,7 @@ const data = [
     company: "Vans",
     color: "white",
     category: "flats",
+    id: 7,
   },
 
   {
@@ -91,6 +98,7 @@ const data = [
     company: "Nike",
     color: "green",
     category: "sneakers",
+    id: 8,
   },
 
   {
@@ -103,6 +111,7 @@ const data = [
     company: "Adidas",
     color: "blue",
     category: "sneakers",
+    id: 9,
   },
 
   {
@@ -115,6 +124,7 @@ const data = [
     company: "Puma",
     color: "green",
     category: "sneakers",
+    id: 10,
   },
   {
     img: "https://m.media-amazon.com/images/I/71E75yRwCDL._AC_UY575_.jpg",
@@ -126,6 +136,7 @@ const data = [
     company: "Puma",
     color: "red",
     category: "sneakers",
+    id: 11,
   },
   {
     img: "https://m.media-amazon.com/images/I/71jeoX0rMBL._AC_UX575_.jpg",
@@ -137,6 +148,7 @@ const data = [
     company: "Puma",
     color: "black",
     category: "sneakers",
+    id: 12,
   },
   {
     img: "https://m.media-amazon.com/images/I/61TM6Q9dvxL._AC_UX575_.jpg",
@@ -148,6 +160,7 @@ const data = [
     company: "Puma",
     color: "white",
     category: "sneakers",
+    id: 13,
   },
   {
     img: "https://m.media-amazon.com/images/I/7128-af7joL._AC_UY575_.jpg",
@@ -159,6 +172,7 @@ const data = [
     company: "Puma",
     color: "black",
     category: "sneakers",
+    id: 14,
   },
 
   {
@@ -171,6 +185,7 @@ const data = [
     company: "Puma",
     color: "green",
     category: "sneakers",
+    id: 15,
   },
   {
     img: "https://m.media-amazon.com/images/I/719gdz8lsTS._AC_UX575_.jpg",
@@ -182,6 +197,7 @@ const data = [
     company: "Vans",
     color: "red",
     category: "flats",
+    id: 16,
   },
   {
     img: "https://m.media-amazon.com/images/I/71gpFHJlnoL._AC_UX575_.jpg",
@@ -193,6 +209,7 @@ const data = [
     company: "Vans",
     color: "white",
     category: "sandals",
+    id: 17,
   },
   {
     img: "https://m.media-amazon.com/images/I/71pf7VFs9CL._AC_UX575_.jpg",
@@ -204,6 +221,7 @@ const data = [
     company: "Vans",
     color: "blue",
     category: "sandals",
+    id: 18,
   },
   {
     img: "https://m.media-amazon.com/images/I/61N4GyWcHPL._AC_UY575_.jpg",
@@ -215,6 +233,7 @@ const data = [
     company: "Nike",
     color: "black",
     category: "sandals",
+    id: 19,
   },
   {
     img: "https://m.media-amazon.com/images/I/61bncQ44yML._AC_UX695_.jpg",
@@ -226,6 +245,7 @@ const data = [
     company: "Vans",
     color: "black",
     category: "heels",
+    id: 20,
   },
   {
     img: "https://m.media-amazon.com/images/I/71czu7WgGuL._AC_UY695_.jpg",
@@ -237,6 +257,7 @@ const data = [
     company: "puma",
     color: "black",
     category: "heels",
+    id: 21,
   },
   {
     img: "https://m.media-amazon.com/images/I/61men05KRxL._AC_UY625_.jpg",
@@ -248,19 +269,8 @@ const data = [
     company: "Nike",
     color: "red",
     category: "heels",
+    id: 22,
   },
-  {
-    img: "https://m.media-amazon.com/images/I/519MRhRKGFL._AC_UX575_.jpg",
-    title: "Nike Air Vapormax Plus",
-    // star: <AiFillStar className="rating-star" />,
-    reviews: "(123 reviews)",
-    prevPrice: "$140,00",
-    newPrice: "200",
-    company: "Nike",
-    color: "red",
-    category: "sneakers",
-  },
-
   {
     img: "https://m.media-amazon.com/images/I/51PGWTXgf-L._AC_UY625_.jpg",
     title: "Low Mid Block Heels",
@@ -271,6 +281,7 @@ const data = [
     company: "Nike",
     color: "black",
     category: "heels",
+    id: 24,
   },
   {
     img: "https://m.media-amazon.com/images/I/616sA5XUKtL._AC_UY675_.jpg",
@@ -282,6 +293,7 @@ const data = [
     company: "Adidas",
     color: "black",
     category: "heels",
+    id: 25,
   },
   {
     img: "https://m.media-amazon.com/images/I/71h5+MbEK7L._AC_UY625_.jpg",
@@ -293,6 +305,7 @@ const data = [
     company: "Adidas",
     color: "white",
     category: "heels",
+    id: 26,
   },
   {
     img: "https://m.media-amazon.com/images/I/61uw5RDxKQL._AC_UY625_.jpg",
@@ -304,6 +317,7 @@ const data = [
     company: "Adidas",
     color: "black",
     category: "heels",
+    id: 27,
   },
   {
     img: "https://m.media-amazon.com/images/I/71yhoZP0l6L._AC_UY695_.jpg",
@@ -315,6 +329,7 @@ const data = [
     company: "Adidas",
     color: "black",
     category: "flats",
+    id: 28,
   },
 ];
 

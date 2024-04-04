@@ -9,6 +9,7 @@ export const ResourcePath =  {
     CART: `${PROJECT}/cart`,
     ORDERS: `${PROJECT}/orders`,
     FAVORITES: `${PROJECT}/favorites`,
+    LANDING: `${PROJECT}/LandingPage`,
 
     // Error
     ERROR: `${PROJECT}/404`,
@@ -24,6 +25,10 @@ export const ResourcePath =  {
     USER: '/user',
     USER_PROFILE: '/user/profile',
     USER_ORDERS: '/user/orders',
+
+    GET_ALL_USERS:"https://api.escuelajs.co/api/v1/users",
+    // GET_ALL_ORDERS:"https://fakestoreapi.com/carts",
+    
    
     AUTH: '/auth'
 
